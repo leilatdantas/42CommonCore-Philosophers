@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:20:40 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/04/15 12:29:22 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/04/17 13:36:54 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,25 +87,25 @@ int		is_number(char *str);
 int		ft_usleep(size_t milliseconds);
 int		death_loop(t_philo *philo);
 void	ft_destroy(t_data *data);
-
 //init
-void	init_data(t_data *data, t_philo *philos, char **argv, char argc);
-void	init_forks(pthread_mutex_t *forks, size_t nbr_philos);
 void	init_philos(t_data *data, t_philo *philos);
-
-void	print_message(char *str, t_philo *philo);
-int		create_threads(t_data *data, t_philo *philos);
+void	init_forks(pthread_mutex_t *forks, size_t nbr_philos);
+void	init_data(t_data *data, t_philo *philos, char **argv, char argc);
 //main
 void	one_philo(t_data *data, t_philo *philo);
 int		check_args(char **argv);
 //destroy
-void	ft_destroy(t_data *data);
 void	ft_free(t_data *data);
+void	ft_destroy(t_data *data);
 //routine
 void	*routine(void *pointer);
 //checkers
-int		check_death(t_philo *philo);
-int		is_dead(t_philo *philo);
+int		death_loop(t_philo *philo);
 int		check_meals(t_philo *philos);
+int		is_dead(t_philo *philo);
+int		check_death(t_philo *philo);
+//philo
+void	print_message(char *str, t_philo *philo);
+int		create_threads(t_data *data, t_philo *philos);
 
 #endif
