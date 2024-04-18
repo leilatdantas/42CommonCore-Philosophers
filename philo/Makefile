@@ -6,12 +6,12 @@
 #    By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 12:33:46 by lebarbos          #+#    #+#              #
-#    Updated: 2024/04/15 14:10:29 by lebarbos         ###   ########.fr        #
+#    Updated: 2024/04/18 17:04:51 by lebarbos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
-FLAGS = -Werror -Wextra -Wall #-fsanitize=thread
+FLAGS = -Werror -Wextra -Wall -g #-fsanitize=thread
 SRCS = main.c checkers.c destroy.c init.c philo.c \
 	routine.c utils.c
 OBJS = $(SRCS:.c=.o)

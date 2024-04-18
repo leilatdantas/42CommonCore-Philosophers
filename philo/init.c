@@ -6,7 +6,7 @@
 /*   By: lebarbos <lebarbos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 11:14:59 by lebarbos          #+#    #+#             */
-/*   Updated: 2024/04/15 12:17:04 by lebarbos         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:07:34 by lebarbos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	init_philos(t_data *data, t_philo *philos)
 	while (i < data->philo_nbr)
 	{
 		philos[i].data = data;
+		philos[i].death = &data->death;
+		philos[i].is_eating = 0;
 		philos[i].id = i + 1;
 		philos[i].death = &data->death;
 		philos[i].meals_eaten = 0;
